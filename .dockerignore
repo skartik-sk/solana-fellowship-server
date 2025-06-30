@@ -1,0 +1,55 @@
+# Docker ignore file for Solana Fellowship Server
+
+# Rust build artifacts
+target/
+debug/
+release/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+docs/
+
+# Logs
+*.log
+log.txt
+
+# Deployment files
+fly.toml
+render.yaml
+railway.toml
+vercel.json
+docker-compose.yml
+k8s-deployment.yaml
+nginx.conf
+
+# Scripts
+*.sh
+test_*
+
+# Environment files
+.env
+.env.local
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor backup files
+*~
+*.bak
+
+# Temporary files
+tmp/
+temp/

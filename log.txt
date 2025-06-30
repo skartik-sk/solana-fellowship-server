@@ -1,0 +1,924 @@
+2025-06-30T18:15:32.97616889Z ==> Cloning from https://github.com/skartik-sk/solana-fellowship-server
+2025-06-30T18:15:33.472041402Z ==> Checking out commit 936b1f34d099ee77f05499e0792e209df58455f4 in branch main
+2025-06-30T18:15:35.374694709Z #1 [internal] load build definition from Dockerfile
+2025-06-30T18:15:35.37472156Z #1 transferring dockerfile: 998B done
+2025-06-30T18:15:35.37472466Z #1 DONE 0.0s
+2025-06-30T18:15:35.37472682Z 
+2025-06-30T18:15:35.37472902Z #2 [internal] load metadata for docker.io/library/rust:1.80-slim
+2025-06-30T18:15:35.525336435Z #2 ...
+2025-06-30T18:15:35.525356405Z 
+2025-06-30T18:15:35.525360916Z #3 [auth] library/rust:pull render-prod/docker-mirror-repository/library/rust:pull token for us-west1-docker.pkg.dev
+2025-06-30T18:15:35.525365576Z #3 DONE 0.0s
+2025-06-30T18:15:35.525368636Z 
+2025-06-30T18:15:35.525371866Z #4 [auth] library/debian:pull render-prod/docker-mirror-repository/library/debian:pull token for us-west1-docker.pkg.dev
+2025-06-30T18:15:35.525375456Z #4 DONE 0.0s
+2025-06-30T18:15:35.675602663Z 
+2025-06-30T18:15:35.675628004Z #5 [internal] load metadata for docker.io/library/debian:bookworm-slim
+2025-06-30T18:15:35.825924873Z #5 DONE 0.5s
+2025-06-30T18:15:35.825947434Z 
+2025-06-30T18:15:35.825953414Z #2 [internal] load metadata for docker.io/library/rust:1.80-slim
+2025-06-30T18:15:36.379257128Z #2 DONE 1.1s
+2025-06-30T18:15:36.379272149Z 
+2025-06-30T18:15:36.379277059Z #6 [internal] load .dockerignore
+2025-06-30T18:15:36.379280889Z #6 transferring context:
+2025-06-30T18:15:36.530190097Z #6 transferring context: 2B done
+2025-06-30T18:15:36.530213509Z #6 DONE 0.0s
+2025-06-30T18:15:36.530217249Z 
+2025-06-30T18:15:36.530220769Z #7 [internal] load build context
+2025-06-30T18:15:36.530224909Z #7 transferring context: 11.93kB done
+2025-06-30T18:15:36.530228729Z #7 DONE 0.0s
+2025-06-30T18:15:36.53023297Z 
+2025-06-30T18:15:36.53023674Z #8 [stage-1 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:e5865e6858dacc255bead044a7f2d0ad8c362433cfaa5acefb670c1edf54dfef
+2025-06-30T18:15:36.53024951Z #8 resolve docker.io/library/debian:bookworm-slim@sha256:e5865e6858dacc255bead044a7f2d0ad8c362433cfaa5acefb670c1edf54dfef 0.0s done
+2025-06-30T18:15:36.63231525Z #8 sha256:dad67da3f26bce15939543965e09c4059533b025f707aad72ed3d3f3a09c66f8 0B / 28.23MB 0.2s
+2025-06-30T18:15:36.767890281Z #8 sha256:dad67da3f26bce15939543965e09c4059533b025f707aad72ed3d3f3a09c66f8 16.78MB / 28.23MB 0.3s
+2025-06-30T18:15:36.871709644Z #8 sha256:dad67da3f26bce15939543965e09c4059533b025f707aad72ed3d3f3a09c66f8 28.23MB / 28.23MB 0.4s done
+2025-06-30T18:15:36.871759187Z #8 extracting sha256:dad67da3f26bce15939543965e09c4059533b025f707aad72ed3d3f3a09c66f8
+2025-06-30T18:15:38.274401112Z #8 extracting sha256:dad67da3f26bce15939543965e09c4059533b025f707aad72ed3d3f3a09c66f8 1.3s done
+2025-06-30T18:15:38.274418183Z #8 DONE 1.8s
+2025-06-30T18:15:38.274421043Z 
+2025-06-30T18:15:38.274424813Z #9 [builder 1/6] FROM docker.io/library/rust:1.80-slim@sha256:907ff4b3ee7df57149ffee04f606e0a08b9b2ed3507f00a19cf3c9c0f74b7681
+2025-06-30T18:15:38.274428833Z #9 resolve docker.io/library/rust:1.80-slim@sha256:907ff4b3ee7df57149ffee04f606e0a08b9b2ed3507f00a19cf3c9c0f74b7681 0.0s done
+2025-06-30T18:15:38.274435773Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 33.55MB / 251.07MB 1.7s
+2025-06-30T18:15:38.274439573Z #9 sha256:a2318d6c47ec9cac5acc500c47c79602bcf953cec711a18bc898911a0984365b 29.13MB / 29.13MB 0.9s done
+2025-06-30T18:15:38.274443014Z #9 extracting sha256:a2318d6c47ec9cac5acc500c47c79602bcf953cec711a18bc898911a0984365b
+2025-06-30T18:15:38.57584503Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 55.57MB / 251.07MB 2.0s
+2025-06-30T18:15:38.877025657Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 71.30MB / 251.07MB 2.3s
+2025-06-30T18:15:38.877046338Z #9 extracting sha256:a2318d6c47ec9cac5acc500c47c79602bcf953cec711a18bc898911a0984365b 1.4s done
+2025-06-30T18:15:39.027064033Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 83.89MB / 251.07MB 2.6s
+2025-06-30T18:15:39.477235245Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 100.66MB / 251.07MB 3.0s
+2025-06-30T18:15:39.91830166Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 117.44MB / 251.07MB 3.3s
+2025-06-30T18:15:40.178255853Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 141.56MB / 251.07MB 3.6s
+2025-06-30T18:15:40.479703222Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 159.38MB / 251.07MB 3.9s
+2025-06-30T18:15:40.742321533Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 176.16MB / 251.07MB 4.2s
+2025-06-30T18:15:40.995440918Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 201.33MB / 251.07MB 4.5s
+2025-06-30T18:15:41.12752261Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 218.10MB / 251.07MB 4.7s
+2025-06-30T18:15:41.276639232Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 231.92MB / 251.07MB 4.8s
+2025-06-30T18:15:41.726801494Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 251.07MB / 251.07MB 5.3s
+2025-06-30T18:15:42.431280007Z #9 sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 251.07MB / 251.07MB 5.9s done
+2025-06-30T18:15:42.431299788Z #9 extracting sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c
+2025-06-30T18:15:45.429113131Z #9 ...
+2025-06-30T18:15:45.429136312Z 
+2025-06-30T18:15:45.429144332Z #10 [stage-1 2/4] RUN apt-get update && apt-get install -y     ca-certificates     libssl3     && rm -rf /var/lib/apt/lists/*
+2025-06-30T18:15:45.429150852Z #10 0.139 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+2025-06-30T18:15:45.429155453Z #10 0.161 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+2025-06-30T18:15:45.429159663Z #10 0.180 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+2025-06-30T18:15:45.429164143Z #10 0.257 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8793 kB]
+2025-06-30T18:15:45.429168783Z #10 0.393 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [756 B]
+2025-06-30T18:15:45.429174944Z #10 0.422 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [270 kB]
+2025-06-30T18:15:45.429181164Z #10 1.191 Fetched 9318 kB in 1s (8623 kB/s)
+2025-06-30T18:15:45.429185184Z #10 1.191 Reading package lists...
+2025-06-30T18:15:45.429188904Z #10 1.595 Reading package lists...
+2025-06-30T18:15:45.429192634Z #10 1.984 Building dependency tree...
+2025-06-30T18:15:45.429197225Z #10 2.080 Reading state information...
+2025-06-30T18:15:45.429201905Z #10 2.172 The following additional packages will be installed:
+2025-06-30T18:15:45.429207045Z #10 2.172   openssl
+2025-06-30T18:15:45.429209875Z #10 2.202 The following NEW packages will be installed:
+2025-06-30T18:15:45.429212526Z #10 2.202   ca-certificates libssl3 openssl
+2025-06-30T18:15:45.429215236Z #10 2.234 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+2025-06-30T18:15:45.429218116Z #10 2.234 Need to get 3608 kB of archives.
+2025-06-30T18:15:45.429220816Z #10 2.234 After this operation, 8914 kB of additional disk space will be used.
+2025-06-30T18:15:45.429223606Z #10 2.234 Get:1 http://deb.debian.org/debian bookworm/main amd64 libssl3 amd64 3.0.16-1~deb12u1 [2026 kB]
+2025-06-30T18:15:45.429226286Z #10 2.295 Get:2 http://deb.debian.org/debian bookworm/main amd64 openssl amd64 3.0.16-1~deb12u1 [1427 kB]
+2025-06-30T18:15:45.429237457Z #10 2.301 Get:3 http://deb.debian.org/debian bookworm-updates/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+2025-06-30T18:15:45.429239357Z #10 2.398 debconf: delaying package configuration, since apt-utils is not installed
+2025-06-30T18:15:45.429240997Z #10 2.418 Fetched 3608 kB in 0s (37.8 MB/s)
+2025-06-30T18:15:45.429242737Z #10 2.445 Selecting previously unselected package libssl3:amd64.
+2025-06-30T18:15:45.429260158Z #10 2.445 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6089 files and directories currently installed.)
+2025-06-30T18:15:45.429264948Z #10 2.450 Preparing to unpack .../libssl3_3.0.16-1~deb12u1_amd64.deb ...
+2025-06-30T18:15:45.429266728Z #10 2.457 Unpacking libssl3:amd64 (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:45.429268428Z #10 2.587 Selecting previously unselected package openssl.
+2025-06-30T18:15:45.429270218Z #10 2.592 Preparing to unpack .../openssl_3.0.16-1~deb12u1_amd64.deb ...
+2025-06-30T18:15:45.429271918Z #10 2.592 Unpacking openssl (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:45.429273518Z #10 2.710 Selecting previously unselected package ca-certificates.
+2025-06-30T18:15:45.429275229Z #10 2.710 Preparing to unpack .../ca-certificates_20230311+deb12u1_all.deb ...
+2025-06-30T18:15:45.429276949Z #10 2.714 Unpacking ca-certificates (20230311+deb12u1) ...
+2025-06-30T18:15:45.429278599Z #10 2.778 Setting up libssl3:amd64 (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:45.429280299Z #10 2.787 Setting up openssl (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:45.429281929Z #10 2.802 Setting up ca-certificates (20230311+deb12u1) ...
+2025-06-30T18:15:45.429283629Z #10 2.878 debconf: unable to initialize frontend: Dialog
+2025-06-30T18:15:45.429285279Z #10 2.878 debconf: (TERM is not set, so the dialog frontend is not usable.)
+2025-06-30T18:15:45.429286909Z #10 2.878 debconf: falling back to frontend: Readline
+2025-06-30T18:15:45.429288549Z #10 2.878 debconf: unable to initialize frontend: Readline
+2025-06-30T18:15:45.429292019Z #10 2.878 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+2025-06-30T18:15:45.42929371Z #10 2.878 debconf: falling back to frontend: Teletype
+2025-06-30T18:15:45.42929539Z #10 3.329 Updating certificates in /etc/ssl/certs...
+2025-06-30T18:15:45.429297259Z #10 4.012 142 added, 0 removed; done.
+2025-06-30T18:15:45.42929907Z #10 4.218 Processing triggers for libc-bin (2.36-9+deb12u10) ...
+2025-06-30T18:15:45.42930073Z #10 4.237 Processing triggers for ca-certificates (20230311+deb12u1) ...
+2025-06-30T18:15:45.42930239Z #10 4.245 Updating certificates in /etc/ssl/certs...
+2025-06-30T18:15:45.42930406Z #10 4.981 0 added, 0 removed; done.
+2025-06-30T18:15:45.42930569Z #10 4.981 Running hooks in /etc/ca-certificates/update.d...
+2025-06-30T18:15:45.42930742Z #10 4.982 done.
+2025-06-30T18:15:45.724106358Z #10 DONE 7.5s
+2025-06-30T18:15:45.724123299Z 
+2025-06-30T18:15:45.72412745Z #9 [builder 1/6] FROM docker.io/library/rust:1.80-slim@sha256:907ff4b3ee7df57149ffee04f606e0a08b9b2ed3507f00a19cf3c9c0f74b7681
+2025-06-30T18:15:45.874843848Z #9 ...
+2025-06-30T18:15:45.874863689Z 
+2025-06-30T18:15:45.87487318Z #11 [stage-1 3/4] RUN useradd -r -s /bin/false appuser
+2025-06-30T18:15:49.295827788Z #11 DONE 3.5s
+2025-06-30T18:15:49.295844349Z 
+2025-06-30T18:15:49.295848069Z #9 [builder 1/6] FROM docker.io/library/rust:1.80-slim@sha256:907ff4b3ee7df57149ffee04f606e0a08b9b2ed3507f00a19cf3c9c0f74b7681
+2025-06-30T18:15:49.295851099Z #9 extracting sha256:67bf03ed1c368822e027a2732362680f56ce5137e91ba84ce386e51fd189061c 6.9s done
+2025-06-30T18:15:49.29585395Z #9 DONE 12.9s
+2025-06-30T18:15:49.42207629Z 
+2025-06-30T18:15:49.422097481Z #12 [builder 2/6] RUN apt-get update && apt-get install -y     pkg-config     libssl-dev     && rm -rf /var/lib/apt/lists/*
+2025-06-30T18:15:49.422102311Z #12 0.096 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+2025-06-30T18:15:49.422106552Z #12 0.124 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+2025-06-30T18:15:49.565018345Z #12 0.135 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+2025-06-30T18:15:49.565037026Z #12 0.190 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8793 kB]
+2025-06-30T18:15:49.565041206Z #12 0.267 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [756 B]
+2025-06-30T18:15:49.715317673Z #12 0.285 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [270 kB]
+2025-06-30T18:15:50.269622212Z #12 0.972 Fetched 9318 kB in 1s (10.4 MB/s)
+2025-06-30T18:15:50.720335168Z #12 0.972 Reading package lists...
+2025-06-30T18:15:51.133153752Z #12 1.362 Reading package lists...
+2025-06-30T18:15:51.133171722Z #12 1.747 Building dependency tree...
+2025-06-30T18:15:51.284262349Z #12 1.835 Reading state information...
+2025-06-30T18:15:51.28427947Z #12 1.923 The following additional packages will be installed:
+2025-06-30T18:15:51.28428347Z #12 1.924   libpkgconf3 libssl3 openssl pkgconf pkgconf-bin
+2025-06-30T18:15:51.28428748Z #12 1.924 Suggested packages:
+2025-06-30T18:15:51.28429185Z #12 1.924   libssl-doc
+2025-06-30T18:15:51.392154148Z #12 2.002 The following NEW packages will be installed:
+2025-06-30T18:15:51.392172799Z #12 2.002   libpkgconf3 libssl-dev pkg-config pkgconf pkgconf-bin
+2025-06-30T18:15:51.392176919Z #12 2.003 The following packages will be upgraded:
+2025-06-30T18:15:51.392181249Z #12 2.003   libssl3 openssl
+2025-06-30T18:15:51.392184729Z #12 2.036 2 upgraded, 5 newly installed, 0 to remove and 46 not upgraded.
+2025-06-30T18:15:51.39218885Z #12 2.036 Need to get 5998 kB of archives.
+2025-06-30T18:15:51.39219229Z #12 2.036 After this operation, 12.9 MB of additional disk space will be used.
+2025-06-30T18:15:51.39219628Z #12 2.036 Get:1 http://deb.debian.org/debian bookworm/main amd64 libpkgconf3 amd64 1.8.1-1 [36.1 kB]
+2025-06-30T18:15:51.39219995Z #12 2.052 Get:2 http://deb.debian.org/debian bookworm/main amd64 libssl3 amd64 3.0.16-1~deb12u1 [2026 kB]
+2025-06-30T18:15:51.39220345Z #12 2.095 Get:3 http://deb.debian.org/debian bookworm/main amd64 libssl-dev amd64 3.0.16-1~deb12u1 [2440 kB]
+2025-06-30T18:15:51.508532395Z #12 2.105 Get:4 http://deb.debian.org/debian bookworm/main amd64 openssl amd64 3.0.16-1~deb12u1 [1427 kB]
+2025-06-30T18:15:51.508550086Z #12 2.110 Get:5 http://deb.debian.org/debian bookworm/main amd64 pkgconf-bin amd64 1.8.1-1 [29.5 kB]
+2025-06-30T18:15:51.508554706Z #12 2.110 Get:6 http://deb.debian.org/debian bookworm/main amd64 pkgconf amd64 1.8.1-1 [25.9 kB]
+2025-06-30T18:15:51.508558226Z #12 2.110 Get:7 http://deb.debian.org/debian bookworm/main amd64 pkg-config amd64 1.8.1-1 [13.7 kB]
+2025-06-30T18:15:51.508572497Z #12 2.211 debconf: delaying package configuration, since apt-utils is not installed
+2025-06-30T18:15:51.619994085Z #12 2.237 Fetched 5998 kB in 0s (57.9 MB/s)
+2025-06-30T18:15:51.620010876Z #12 2.263 Selecting previously unselected package libpkgconf3:amd64.
+2025-06-30T18:15:51.620014666Z #12 2.263 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 9027 files and directories currently installed.)
+2025-06-30T18:15:51.620017066Z #12 2.271 Preparing to unpack .../0-libpkgconf3_1.8.1-1_amd64.deb ...
+2025-06-30T18:15:51.620019736Z #12 2.278 Unpacking libpkgconf3:amd64 (1.8.1-1) ...
+2025-06-30T18:15:51.620022236Z #12 2.322 Preparing to unpack .../1-libssl3_3.0.16-1~deb12u1_amd64.deb ...
+2025-06-30T18:15:51.770890062Z #12 2.333 Unpacking libssl3:amd64 (3.0.16-1~deb12u1) over (3.0.14-1~deb12u2) ...
+2025-06-30T18:15:51.92097674Z #12 2.484 Selecting previously unselected package libssl-dev:amd64.
+2025-06-30T18:15:51.920994291Z #12 2.486 Preparing to unpack .../2-libssl-dev_3.0.16-1~deb12u1_amd64.deb ...
+2025-06-30T18:15:51.920997461Z #12 2.489 Unpacking libssl-dev:amd64 (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:52.056433575Z #12 2.647 Preparing to unpack .../3-openssl_3.0.16-1~deb12u1_amd64.deb ...
+2025-06-30T18:15:52.056448275Z #12 2.657 Unpacking openssl (3.0.16-1~deb12u1) over (3.0.14-1~deb12u2) ...
+2025-06-30T18:15:52.056451956Z #12 2.759 Selecting previously unselected package pkgconf-bin.
+2025-06-30T18:15:52.181136732Z #12 2.760 Preparing to unpack .../4-pkgconf-bin_1.8.1-1_amd64.deb ...
+2025-06-30T18:15:52.181156453Z #12 2.764 Unpacking pkgconf-bin (1.8.1-1) ...
+2025-06-30T18:15:52.181160203Z #12 2.795 Selecting previously unselected package pkgconf:amd64.
+2025-06-30T18:15:52.181162613Z #12 2.796 Preparing to unpack .../5-pkgconf_1.8.1-1_amd64.deb ...
+2025-06-30T18:15:52.181164723Z #12 2.801 Unpacking pkgconf:amd64 (1.8.1-1) ...
+2025-06-30T18:15:52.181166814Z #12 2.838 Selecting previously unselected package pkg-config:amd64.
+2025-06-30T18:15:52.181169223Z #12 2.838 Preparing to unpack .../6-pkg-config_1.8.1-1_amd64.deb ...
+2025-06-30T18:15:52.181171324Z #12 2.846 Unpacking pkg-config:amd64 (1.8.1-1) ...
+2025-06-30T18:15:52.181173504Z #12 2.883 Setting up libssl3:amd64 (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:52.331979276Z #12 2.893 Setting up libpkgconf3:amd64 (1.8.1-1) ...
+2025-06-30T18:15:52.335220702Z #12 2.902 Setting up libssl-dev:amd64 (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:52.335228643Z #12 2.912 Setting up pkgconf-bin (1.8.1-1) ...
+2025-06-30T18:15:52.335232563Z #12 2.922 Setting up openssl (3.0.16-1~deb12u1) ...
+2025-06-30T18:15:52.335236293Z #12 2.936 Setting up pkgconf:amd64 (1.8.1-1) ...
+2025-06-30T18:15:52.335239753Z #12 2.946 Setting up pkg-config:amd64 (1.8.1-1) ...
+2025-06-30T18:15:52.335243763Z #12 2.956 Processing triggers for libc-bin (2.36-9+deb12u8) ...
+2025-06-30T18:15:52.482513636Z #12 DONE 3.0s
+2025-06-30T18:15:52.482533497Z 
+2025-06-30T18:15:52.482538067Z #13 [builder 3/6] WORKDIR /app
+2025-06-30T18:15:52.482541757Z #13 DONE 0.0s
+2025-06-30T18:15:52.482545157Z 
+2025-06-30T18:15:52.482549588Z #14 [builder 4/6] COPY Cargo.toml ./
+2025-06-30T18:15:52.482555478Z #14 DONE 0.0s
+2025-06-30T18:15:52.482560968Z 
+2025-06-30T18:15:52.482566829Z #15 [builder 5/6] COPY src ./src
+2025-06-30T18:15:52.482584979Z #15 DONE 0.0s
+2025-06-30T18:15:52.48259806Z 
+2025-06-30T18:15:52.48260098Z #16 [builder 6/6] RUN cargo build --release
+2025-06-30T18:15:52.633372541Z #16 0.134     Updating crates.io index
+2025-06-30T18:15:54.086892284Z #16 1.635      Locking 590 packages to latest compatible versions
+2025-06-30T18:15:54.086920975Z #16 1.635       Adding addr2line v0.24.2 (latest: v0.25.0)
+2025-06-30T18:15:54.086924726Z #16 1.642       Adding ark-bn254 v0.4.0 (latest: v0.5.0)
+2025-06-30T18:15:54.086927915Z #16 1.642       Adding ark-ec v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086931326Z #16 1.643       Adding ark-ff v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086934136Z #16 1.643       Adding ark-ff-asm v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086936756Z #16 1.643       Adding ark-ff-macros v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086939246Z #16 1.643       Adding ark-poly v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086942026Z #16 1.643       Adding ark-serialize v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086944286Z #16 1.643       Adding ark-serialize-derive v0.4.2 (latest: v0.5.0)
+2025-06-30T18:15:54.086946456Z #16 1.643       Adding ark-std v0.4.0 (latest: v0.5.0)
+2025-06-30T18:15:54.086948827Z #16 1.643       Adding asn1-rs v0.5.2 (latest: v0.7.1)
+2025-06-30T18:15:54.086955107Z #16 1.643       Adding asn1-rs-derive v0.4.0 (latest: v0.7.0)
+2025-06-30T18:15:54.086958187Z #16 1.643       Adding asn1-rs-impl v0.1.0 (latest: v0.3.0)
+2025-06-30T18:15:54.086960747Z #16 1.643       Adding async-channel v1.9.0 (latest: v2.3.1)
+2025-06-30T18:15:54.086963357Z #16 1.646       Adding base64 v0.12.3 (latest: v0.22.1)
+2025-06-30T18:15:54.086966027Z #16 1.646       Adding base64 v0.13.1 (latest: v0.22.1)
+2025-06-30T18:15:54.086968637Z #16 1.646       Adding bincode v1.3.3 (latest: v2.0.1)
+2025-06-30T18:15:54.086971088Z #16 1.647       Adding block-buffer v0.9.0 (latest: v0.10.4)
+2025-06-30T18:15:54.086973398Z #16 1.647       Adding borsh v0.10.4 (latest: v1.5.7)
+2025-06-30T18:15:54.086975918Z #16 1.647       Adding borsh-derive v0.10.4 (latest: v1.5.7)
+2025-06-30T18:15:54.086978858Z #16 1.649       Adding console_log v0.2.2 (latest: v1.0.0)
+2025-06-30T18:15:54.086981278Z #16 1.649       Adding constant_time_eq v0.3.1 (latest: v0.4.2)
+2025-06-30T18:15:54.086984388Z #16 1.650       Adding crypto-mac v0.8.0 (latest: v0.11.1)
+2025-06-30T18:15:54.086986958Z #16 1.650       Adding curve25519-dalek v3.2.0 (latest: v4.1.3)
+2025-06-30T18:15:54.086989658Z #16 1.651       Adding dashmap v5.5.3 (latest: v6.1.0)
+2025-06-30T18:15:54.086992179Z #16 1.651       Adding der-parser v8.2.0 (latest: v10.0.0)
+2025-06-30T18:15:54.086994729Z #16 1.651       Adding digest v0.9.0 (latest: v0.10.7)
+2025-06-30T18:15:54.086997499Z #16 1.651       Adding dlopen2 v0.5.0 (latest: v0.8.0)
+2025-06-30T18:15:54.087000009Z #16 1.651       Adding dlopen2_derive v0.3.0 (latest: v0.4.1)
+2025-06-30T18:15:54.087002469Z #16 1.651       Adding ed25519 v1.5.3 (latest: v2.2.3)
+2025-06-30T18:15:54.087005209Z #16 1.651       Adding ed25519-dalek v1.0.1 (latest: v2.1.1)
+2025-06-30T18:15:54.087008299Z #16 1.652       Adding ed25519-dalek-bip32 v0.2.0 (latest: v0.3.0)
+2025-06-30T18:15:54.08701107Z #16 1.652       Adding env_logger v0.9.3 (latest: v0.11.8)
+2025-06-30T18:15:54.08701428Z #16 1.652       Adding event-listener v2.5.3 (latest: v5.4.0)
+2025-06-30T18:15:54.08701707Z #16 1.652       Adding fastbloom v0.9.0 (latest: v0.12.0)
+2025-06-30T18:15:54.08702005Z #16 1.652       Adding fiat-crypto v0.2.9 (latest: v0.3.0)
+2025-06-30T18:15:54.08702257Z #16 1.652       Adding foreign-types v0.3.2 (latest: v0.5.0)
+2025-06-30T18:15:54.08702523Z #16 1.652       Adding foreign-types-shared v0.1.1 (latest: v0.3.1)
+2025-06-30T18:15:54.087039611Z #16 1.653       Adding generic-array v0.14.7 (latest: v1.2.0)
+2025-06-30T18:15:54.087042311Z #16 1.653       Adding gethostname v0.2.3 (latest: v1.0.2)
+2025-06-30T18:15:54.087044791Z #16 1.653       Adding getrandom v0.1.16 (latest: v0.3.3)
+2025-06-30T18:15:54.087063352Z #16 1.653       Adding getrandom v0.2.16 (latest: v0.3.3)
+2025-06-30T18:15:54.087066292Z #16 1.653       Adding gimli v0.31.1 (latest: v0.32.0)
+2025-06-30T18:15:54.087068922Z #16 1.654       Adding governor v0.6.3 (latest: v0.10.0)
+2025-06-30T18:15:54.087071342Z #16 1.654       Adding hashbrown v0.13.2 (latest: v0.15.4)
+2025-06-30T18:15:54.087074093Z #16 1.654       Adding hashbrown v0.14.5 (latest: v0.15.4)
+2025-06-30T18:15:54.087077013Z #16 1.654       Adding hermit-abi v0.1.19 (latest: v0.5.2)
+2025-06-30T18:15:54.087079583Z #16 1.654       Adding histogram v0.6.9 (latest: v0.11.3)
+2025-06-30T18:15:54.087082543Z #16 1.654       Adding hmac v0.8.1 (latest: v0.12.1)
+2025-06-30T18:15:54.087085073Z #16 1.654       Adding http v0.2.12 (latest: v1.3.1)
+2025-06-30T18:15:54.087087563Z #16 1.658       Adding itertools v0.10.5 (latest: v0.14.0)
+2025-06-30T18:15:54.087090173Z #16 1.658       Adding itertools v0.12.1 (latest: v0.14.0)
+2025-06-30T18:15:54.19264075Z #16 1.658       Adding jni-sys v0.3.0 (latest: v0.4.0)
+2025-06-30T18:15:54.192666631Z #16 1.659       Adding libsecp256k1 v0.6.0 (latest: v0.7.2)
+2025-06-30T18:15:54.192669421Z #16 1.659       Adding libsecp256k1-core v0.2.2 (latest: v0.3.0)
+2025-06-30T18:15:54.192672161Z #16 1.659       Adding libsecp256k1-gen-ecmult v0.2.1 (latest: v0.3.0)
+2025-06-30T18:15:54.192674341Z #16 1.659       Adding libsecp256k1-gen-genmult v0.2.1 (latest: v0.3.0)
+2025-06-30T18:15:54.192676451Z #16 1.659       Adding matchit v0.8.4 (latest: v0.8.6)
+2025-06-30T18:15:54.192678871Z #16 1.659       Adding memmap2 v0.5.10 (latest: v0.9.5)
+2025-06-30T18:15:54.192681011Z #16 1.660       Adding nom v7.1.3 (latest: v8.0.0)
+2025-06-30T18:15:54.192683012Z #16 1.660       Adding nu-ansi-term v0.46.0 (latest: v0.50.1)
+2025-06-30T18:15:54.192685092Z #16 1.661       Adding num v0.2.1 (latest: v0.4.3)
+2025-06-30T18:15:54.192687112Z #16 1.661       Adding num-bigint v0.2.6 (latest: v0.4.6)
+2025-06-30T18:15:54.192689282Z #16 1.661       Adding num-complex v0.2.4 (latest: v0.4.6)
+2025-06-30T18:15:54.192691462Z #16 1.661       Adding num-rational v0.2.4 (latest: v0.4.2)
+2025-06-30T18:15:54.192693482Z #16 1.661       Adding object v0.36.7 (latest: v0.37.1)
+2025-06-30T18:15:54.192695572Z #16 1.661       Adding oid-registry v0.6.1 (latest: v0.8.1)
+2025-06-30T18:15:54.192697592Z #16 1.663       Adding pbkdf2 v0.11.0 (latest: v0.12.2)
+2025-06-30T18:15:54.192699612Z #16 1.663       Adding pem v1.1.1 (latest: v3.0.5)
+2025-06-30T18:15:54.192704242Z #16 1.664       Adding proc-macro-crate v0.1.5 (latest: v3.3.0)
+2025-06-30T18:15:54.192706533Z #16 1.665       Adding rand v0.7.3 (latest: v0.9.1)
+2025-06-30T18:15:54.192708593Z #16 1.665       Adding rand v0.8.5 (latest: v0.9.1)
+2025-06-30T18:15:54.192710633Z #16 1.666       Adding rand_chacha v0.2.2 (latest: v0.9.0)
+2025-06-30T18:15:54.192712843Z #16 1.666       Adding rand_chacha v0.3.1 (latest: v0.9.0)
+2025-06-30T18:15:54.192714893Z #16 1.666       Adding rand_core v0.5.1 (latest: v0.9.3)
+2025-06-30T18:15:54.192716893Z #16 1.666       Adding rand_core v0.6.4 (latest: v0.9.3)
+2025-06-30T18:15:54.192718943Z #16 1.666       Adding rand_hc v0.2.0 (latest: v0.4.0)
+2025-06-30T18:15:54.192731564Z #16 1.670       Adding rusticata-macros v4.1.0 (latest: v5.0.0)
+2025-06-30T18:15:54.192733804Z #16 1.670       Adding rustls v0.21.12 (latest: v0.23.28)
+2025-06-30T18:15:54.192751215Z #16 1.671       Adding rustls-platform-verifier v0.5.3 (latest: v0.6.0)
+2025-06-30T18:15:54.192753565Z #16 1.671       Adding rustls-webpki v0.101.7 (latest: v0.103.3)
+2025-06-30T18:15:54.192755705Z #16 1.674       Adding sha2 v0.9.9 (latest: v0.10.9)
+2025-06-30T18:15:54.192757835Z #16 1.675       Adding signature v1.6.4 (latest: v2.2.0)
+2025-06-30T18:15:54.192759865Z #16 1.675       Adding siphasher v0.3.11 (latest: v1.0.1)
+2025-06-30T18:15:54.192762065Z #16 1.719       Adding spl-elgamal-registry v0.2.0 (latest: v0.3.0)
+2025-06-30T18:15:54.192764165Z #16 1.720       Adding spl-token-2022 v8.0.1 (latest: v9.0.0)
+2025-06-30T18:15:54.192766685Z #16 1.720       Adding spl-token-confidential-transfer-proof-extraction v0.3.0 (latest: v0.4.0)
+2025-06-30T18:15:54.192768706Z #16 1.721       Adding syn v1.0.109 (latest: v2.0.104)
+2025-06-30T18:15:54.192770756Z #16 1.722       Adding synstructure v0.12.6 (latest: v0.13.2)
+2025-06-30T18:15:54.192772816Z #16 1.722       Adding thiserror v1.0.69 (latest: v2.0.12)
+2025-06-30T18:15:54.192774826Z #16 1.723       Adding thiserror-impl v1.0.69 (latest: v2.0.12)
+2025-06-30T18:15:54.192776826Z #16 1.726       Adding tokio-rustls v0.24.1 (latest: v0.26.2)
+2025-06-30T18:15:54.192778916Z #16 1.726       Adding tokio-tungstenite v0.20.1 (latest: v0.27.0)
+2025-06-30T18:15:54.192780966Z #16 1.727       Adding toml v0.5.11 (latest: v0.8.23)
+2025-06-30T18:15:54.192783006Z #16 1.729       Adding tungstenite v0.20.1 (latest: v0.27.0)
+2025-06-30T18:15:54.192785117Z #16 1.730       Adding wasi v0.9.0+wasi-snapshot-preview1 (latest: v0.14.2+wasi-0.2.4)
+2025-06-30T18:15:54.192795307Z #16 1.730       Adding wasi v0.11.1+wasi-snapshot-preview1 (latest: v0.14.2+wasi-0.2.4)
+2025-06-30T18:15:54.192797627Z #16 1.732       Adding webpki-root-certs v0.26.11 (latest: v1.0.1)
+2025-06-30T18:15:54.192799667Z #16 1.732       Adding webpki-roots v0.24.0 (latest: v1.0.1)
+2025-06-30T18:15:54.192801797Z #16 1.732       Adding webpki-roots v0.25.4 (latest: v1.0.1)
+2025-06-30T18:15:54.192803897Z #16 1.733       Adding windows-sys v0.45.0 (latest: v0.60.2)
+2025-06-30T18:15:54.192805898Z #16 1.733       Adding windows-sys v0.52.0 (latest: v0.60.2)
+2025-06-30T18:15:54.192807947Z #16 1.733       Adding windows-sys v0.59.0 (latest: v0.60.2)
+2025-06-30T18:15:54.192809988Z #16 1.733       Adding windows-targets v0.42.2 (latest: v0.53.2)
+2025-06-30T18:15:54.192812058Z #16 1.733       Adding windows-targets v0.52.6 (latest: v0.53.2)
+2025-06-30T18:15:54.192816368Z #16 1.733       Adding windows_aarch64_gnullvm v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.192818608Z #16 1.733       Adding windows_aarch64_gnullvm v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192820748Z #16 1.733       Adding windows_aarch64_msvc v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.192829208Z #16 1.733       Adding windows_aarch64_msvc v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192831409Z #16 1.733       Adding windows_i686_gnu v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.192833449Z #16 1.733       Adding windows_i686_gnu v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192835529Z #16 1.733       Adding windows_i686_gnullvm v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192837599Z #16 1.733       Adding windows_i686_msvc v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.192839609Z #16 1.733       Adding windows_i686_msvc v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192841779Z #16 1.733       Adding windows_x86_64_gnu v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.192843789Z #16 1.733       Adding windows_x86_64_gnu v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192845819Z #16 1.733       Adding windows_x86_64_gnullvm v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.19284784Z #16 1.733       Adding windows_x86_64_gnullvm v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.19286375Z #16 1.733       Adding windows_x86_64_msvc v0.42.2 (latest: v0.53.0)
+2025-06-30T18:15:54.19286598Z #16 1.733       Adding windows_x86_64_msvc v0.52.6 (latest: v0.53.0)
+2025-06-30T18:15:54.192875651Z #16 1.734       Adding wit-bindgen-rt v0.39.0 (latest: v0.43.0)
+2025-06-30T18:15:54.192878051Z #16 1.734       Adding x509-parser v0.14.0 (latest: v0.17.0)
+2025-06-30T18:15:54.192881971Z #16 1.763  Downloading crates ...
+2025-06-30T18:15:54.297956734Z #16 1.823   Downloaded aes-gcm-siv v0.11.1
+2025-06-30T18:15:54.297975005Z #16 1.842   Downloaded alloc-no-stdlib v2.0.4
+2025-06-30T18:15:54.297978655Z #16 1.850   Downloaded aead v0.5.2
+2025-06-30T18:15:54.297981136Z #16 1.852   Downloaded adler2 v2.0.1
+2025-06-30T18:15:54.297983156Z #16 1.854   Downloaded ahash v0.8.12
+2025-06-30T18:15:54.297985476Z #16 1.858   Downloaded aho-corasick v1.1.3
+2025-06-30T18:15:54.297989156Z #16 1.869   Downloaded borsh-schema-derive-internal v0.10.4
+2025-06-30T18:15:54.407083252Z #16 1.871   Downloaded pem v1.1.1
+2025-06-30T18:15:54.407100503Z #16 1.873   Downloaded pbkdf2 v0.11.0
+2025-06-30T18:15:54.407103483Z #16 1.879   Downloaded paste v1.0.15
+2025-06-30T18:15:54.407105744Z #16 1.887   Downloaded rusticata-macros v4.1.0
+2025-06-30T18:15:54.407109824Z #16 1.892   Downloaded spl-associated-token-account-client v2.0.0
+2025-06-30T18:15:54.407113204Z #16 1.898   Downloaded spl-token-metadata-interface v0.7.0
+2025-06-30T18:15:54.407115334Z #16 1.903   Downloaded utf8_iter v1.0.4
+2025-06-30T18:15:54.407117404Z #16 1.906   Downloaded zerofrom-derive v0.1.6
+2025-06-30T18:15:54.407119434Z #16 1.908   Downloaded reqwest v0.12.20
+2025-06-30T18:15:54.407121444Z #16 1.926   Downloaded winnow v0.7.11
+2025-06-30T18:15:54.407123524Z #16 1.948   Downloaded spl-transfer-hook-interface v0.10.0
+2025-06-30T18:15:54.407125614Z #16 1.955   Downloaded five8_const v0.1.4
+2025-06-30T18:15:54.407127665Z #16 1.961   Downloaded futures-macro v0.3.31
+2025-06-30T18:15:54.407129785Z #16 1.963   Downloaded time v0.3.41
+2025-06-30T18:15:54.407131845Z #16 1.978   Downloaded futures-channel v0.3.31
+2025-06-30T18:15:54.516576418Z #16 1.981   Downloaded num v0.2.1
+2025-06-30T18:15:54.516600079Z #16 1.983   Downloaded nix v0.30.1
+2025-06-30T18:15:54.516603899Z #16 2.005   Downloaded unit-prefix v0.5.1
+2025-06-30T18:15:54.516606519Z #16 2.009   Downloaded foreign-types v0.3.2
+2025-06-30T18:15:54.51660944Z #16 2.010   Downloaded flate2 v1.1.2
+2025-06-30T18:15:54.51661227Z #16 2.017   Downloaded unicode-width v0.2.1
+2025-06-30T18:15:54.51661511Z #16 2.031   Downloaded hmac v0.12.1
+2025-06-30T18:15:54.51661781Z #16 2.035   Downloaded futures-util v0.3.31
+2025-06-30T18:15:54.51662129Z #16 2.054   Downloaded zstd-sys v2.0.15+zstd.1.5.7
+2025-06-30T18:15:54.51662441Z #16 2.085   Downloaded solana-zk-sdk v2.3.2
+2025-06-30T18:15:54.617141874Z #16 2.098   Downloaded tracing-subscriber v0.3.19
+2025-06-30T18:15:54.617162135Z #16 2.113   Downloaded tokio v1.45.1
+2025-06-30T18:15:54.617164926Z #16 2.174   Downloaded solana-rpc-client v2.3.2
+2025-06-30T18:15:54.617167526Z #16 2.177   Downloaded hmac v0.8.1
+2025-06-30T18:15:54.617169726Z #16 2.179   Downloaded histogram v0.6.9
+2025-06-30T18:15:54.617171836Z #16 2.181   Downloaded hashbrown v0.15.4
+2025-06-30T18:15:54.617173966Z #16 2.188   Downloaded hashbrown v0.14.5
+2025-06-30T18:15:54.717247369Z #16 2.195   Downloaded hashbrown v0.13.2
+2025-06-30T18:15:54.71726683Z #16 2.200   Downloaded governor v0.6.3
+2025-06-30T18:15:54.7172706Z #16 2.206   Downloaded getrandom v0.3.3
+2025-06-30T18:15:54.71727429Z #16 2.211   Downloaded getrandom v0.2.16
+2025-06-30T18:15:54.717294921Z #16 2.215   Downloaded getrandom v0.1.16
+2025-06-30T18:15:54.717298491Z #16 2.218   Downloaded gethostname v0.2.3
+2025-06-30T18:15:54.717301971Z #16 2.220   Downloaded generic-array v0.14.7
+2025-06-30T18:15:54.717306271Z #16 2.222   Downloaded futures-timer v3.0.3
+2025-06-30T18:15:54.717308512Z #16 2.224   Downloaded futures-task v0.3.31
+2025-06-30T18:15:54.717310532Z #16 2.226   Downloaded futures-sink v0.3.31
+2025-06-30T18:15:54.717312562Z #16 2.227   Downloaded futures v0.3.31
+2025-06-30T18:15:54.717314632Z #16 2.234   Downloaded form_urlencoded v1.2.1
+2025-06-30T18:15:54.717317342Z #16 2.235   Downloaded foreign-types-shared v0.1.1
+2025-06-30T18:15:54.717319352Z #16 2.236   Downloaded try-lock v0.2.5
+2025-06-30T18:15:54.717321372Z #16 2.237   Downloaded tracing-log v0.2.0
+2025-06-30T18:15:54.717323792Z #16 2.239   Downloaded tracing-core v0.1.34
+2025-06-30T18:15:54.717325863Z #16 2.243   Downloaded tracing-attributes v0.1.30
+2025-06-30T18:15:54.717327912Z #16 2.247   Downloaded tracing v0.1.41
+2025-06-30T18:15:54.717329973Z #16 2.252   Downloaded tower-service v0.3.3
+2025-06-30T18:15:54.717332003Z #16 2.253   Downloaded tower-layer v0.3.3
+2025-06-30T18:15:54.717334033Z #16 2.255   Downloaded tower-http v0.6.6
+2025-06-30T18:15:54.717336163Z #16 2.267   Downloaded tower v0.5.2
+2025-06-30T18:15:54.717338173Z #16 2.282   Downloaded toml_edit v0.22.27
+2025-06-30T18:15:54.717340273Z #16 2.288   Downloaded toml_datetime v0.6.11
+2025-06-30T18:15:54.817853507Z #16 2.290   Downloaded toml v0.5.11
+2025-06-30T18:15:54.817869358Z #16 2.293   Downloaded tokio-util v0.7.15
+2025-06-30T18:15:54.817871948Z #16 2.303   Downloaded tokio-tungstenite v0.20.1
+2025-06-30T18:15:54.817874118Z #16 2.306   Downloaded tokio-stream v0.1.17
+2025-06-30T18:15:54.817877908Z #16 2.312   Downloaded tokio-rustls v0.26.2
+2025-06-30T18:15:54.817881508Z #16 2.315   Downloaded tokio-rustls v0.24.1
+2025-06-30T18:15:54.817885528Z #16 2.318   Downloaded tokio-macros v2.5.0
+2025-06-30T18:15:54.817888999Z #16 2.320   Downloaded tinyvec_macros v0.1.1
+2025-06-30T18:15:54.817891989Z #16 2.321   Downloaded tinyvec v1.9.0
+2025-06-30T18:15:54.817895139Z #16 2.325   Downloaded tinystr v0.8.1
+2025-06-30T18:15:54.817898199Z #16 2.328   Downloaded time-macros v0.2.22
+2025-06-30T18:15:54.817901319Z #16 2.331   Downloaded solana-sdk v2.3.1
+2025-06-30T18:15:54.817905049Z #16 2.335   Downloaded solana-sanitize v2.2.1
+2025-06-30T18:15:54.81790874Z #16 2.335   Downloaded solana-rpc-client-types v2.3.2
+2025-06-30T18:15:54.81791097Z #16 2.337   Downloaded solana-rpc-client-nonce-utils v2.3.2
+2025-06-30T18:15:54.81791314Z #16 2.339   Downloaded solana-rpc-client-api v2.3.2
+2025-06-30T18:15:54.81791515Z #16 2.340   Downloaded solana-reward-info v2.2.1
+2025-06-30T18:15:54.81791718Z #16 2.341   Downloaded solana-reserved-account-keys v2.2.2
+2025-06-30T18:15:54.81791928Z #16 2.342   Downloaded solana-rent-debits v2.2.1
+2025-06-30T18:15:54.81792131Z #16 2.343   Downloaded solana-rent-collector v2.2.1
+2025-06-30T18:15:54.81792337Z #16 2.344   Downloaded solana-rent v2.2.1
+2025-06-30T18:15:54.81792539Z #16 2.345   Downloaded solana-rayon-threadlimit v2.3.2
+2025-06-30T18:15:54.81792745Z #16 2.346   Downloaded solana-quic-definitions v2.3.1
+2025-06-30T18:15:54.817929491Z #16 2.347   Downloaded solana-quic-client v2.3.2
+2025-06-30T18:15:54.817931521Z #16 2.349   Downloaded solana-pubsub-client v2.3.2
+2025-06-30T18:15:54.817933621Z #16 2.350   Downloaded solana-pubkey v2.4.0
+2025-06-30T18:15:54.817935821Z #16 2.352   Downloaded zstd v0.13.3
+2025-06-30T18:15:54.817937861Z #16 2.356   Downloaded url v2.5.4
+2025-06-30T18:15:54.817939891Z #16 2.359   Downloaded uriparse v0.6.4
+2025-06-30T18:15:54.817951322Z #16 2.362   Downloaded untrusted v0.9.0
+2025-06-30T18:15:54.817953522Z #16 2.365   Downloaded universal-hash v0.5.1
+2025-06-30T18:15:54.817956062Z #16 2.366   Downloaded unicode-ident v1.0.18
+2025-06-30T18:15:54.817958092Z #16 2.370   Downloaded typenum v1.18.0
+2025-06-30T18:15:54.817960092Z #16 2.374   Downloaded tungstenite v0.20.1
+2025-06-30T18:15:54.817962082Z #16 2.379   Downloaded solana-program v2.3.0
+2025-06-30T18:15:54.817964072Z #16 2.383   Downloaded solana-precompiles v2.2.2
+2025-06-30T18:15:54.817966092Z #16 2.384   Downloaded solana-perf v2.3.2
+2025-06-30T18:15:54.817968172Z #16 2.388   Downloaded solana-offchain-message v2.2.1
+2025-06-30T18:15:54.817983933Z #16 2.389   Downloaded openssl v0.10.73
+2025-06-30T18:15:54.921563305Z #16 2.402   Downloaded fnv v1.0.7
+2025-06-30T18:15:54.921583335Z #16 2.403   Downloaded five8_core v0.1.2
+2025-06-30T18:15:54.921587396Z #16 2.404   Downloaded feature-probe v0.1.1
+2025-06-30T18:15:54.921591216Z #16 2.405   Downloaded zstd-safe v7.2.4
+2025-06-30T18:15:54.921594806Z #16 2.408   Downloaded zerovec-derive v0.11.1
+2025-06-30T18:15:54.921598736Z #16 2.409   Downloaded utf-8 v0.7.6
+2025-06-30T18:15:54.921602476Z #16 2.411   Downloaded unicode-xid v0.2.6
+2025-06-30T18:15:54.921605847Z #16 2.413   Downloaded solana-presigner v2.2.1
+2025-06-30T18:15:54.921610017Z #16 2.414   Downloaded solana-precompile-error v2.2.2
+2025-06-30T18:15:54.921613307Z #16 2.415   Downloaded solana-poh-config v2.2.1
+2025-06-30T18:15:54.921616727Z #16 2.416   Downloaded solana-packet v2.2.1
+2025-06-30T18:15:54.921620297Z #16 2.417   Downloaded solana-msg v2.2.1
+2025-06-30T18:15:54.921624108Z #16 2.417   Downloaded solana-ed25519-program v2.2.3
+2025-06-30T18:15:54.921627568Z #16 2.418   Downloaded solana-derivation-path v2.2.1
+2025-06-30T18:15:54.921629628Z #16 2.419   Downloaded solana-define-syscall v2.3.0
+2025-06-30T18:15:54.921631748Z #16 2.420   Downloaded solana-decode-error v2.3.0
+2025-06-30T18:15:54.921634238Z #16 2.421   Downloaded solana-curve25519 v2.3.2
+2025-06-30T18:15:54.921636248Z #16 2.423   Downloaded solana-cpi v2.2.1
+2025-06-30T18:15:54.921638318Z #16 2.424   Downloaded solana-connection-cache v2.3.2
+2025-06-30T18:15:54.921640358Z #16 2.425   Downloaded openssl-sys v0.9.109
+2025-06-30T18:15:54.921642368Z #16 2.433   Downloaded openssl-probe v0.1.6
+2025-06-30T18:15:54.921644418Z #16 2.435   Downloaded openssl-macros v0.1.1
+2025-06-30T18:15:54.921646549Z #16 2.436   Downloaded once_cell v1.21.3
+2025-06-30T18:15:54.921648569Z #16 2.439   Downloaded oid-registry v0.6.1
+2025-06-30T18:15:54.921650579Z #16 2.441   Downloaded num_enum_derive v0.7.4
+2025-06-30T18:15:54.921652579Z #16 2.443   Downloaded num_enum v0.7.4
+2025-06-30T18:15:54.921654589Z #16 2.451   Downloaded num_cpus v1.17.0
+2025-06-30T18:15:54.921656599Z #16 2.455   Downloaded num-traits v0.2.19
+2025-06-30T18:15:54.921658609Z #16 2.459   Downloaded num-rational v0.2.4
+2025-06-30T18:15:54.921660649Z #16 2.461   Downloaded num-iter v0.1.45
+2025-06-30T18:15:54.921662719Z #16 2.462   Downloaded num-integer v0.1.46
+2025-06-30T18:15:54.92167587Z #16 2.464   Downloaded num-derive v0.4.2
+2025-06-30T18:15:54.92167868Z #16 2.467   Downloaded num-conv v0.1.0
+2025-06-30T18:15:54.92168077Z #16 2.468   Downloaded num-complex v0.2.4
+2025-06-30T18:15:54.92168282Z #16 2.470   Downloaded num-bigint v0.4.6
+2025-06-30T18:15:54.92168485Z #16 2.476   Downloaded num-bigint v0.2.6
+2025-06-30T18:15:54.921686911Z #16 2.482   Downloaded icu_properties v2.0.1
+2025-06-30T18:15:54.921688991Z #16 2.485   Downloaded icu_normalizer_data v2.0.0
+2025-06-30T18:15:54.921701621Z #16 2.488   Downloaded icu_normalizer v2.0.0
+2025-06-30T18:15:54.921703901Z #16 2.492   Downloaded icu_locale_core v2.0.0
+2025-06-30T18:15:55.053948561Z #16 2.502   Downloaded icu_collections v2.0.0
+2025-06-30T18:15:55.053965962Z #16 2.512   Downloaded hyper-util v0.1.14
+2025-06-30T18:15:55.053969592Z #16 2.520   Downloaded hyper-rustls v0.27.7
+2025-06-30T18:15:55.053972162Z #16 2.523   Downloaded hyper v1.6.0
+2025-06-30T18:15:55.053974282Z #16 2.533   Downloaded humantime v2.2.0
+2025-06-30T18:15:55.053976382Z #16 2.535   Downloaded httpdate v1.0.3
+2025-06-30T18:15:55.053978413Z #16 2.537   Downloaded httparse v1.10.1
+2025-06-30T18:15:55.053980443Z #16 2.540   Downloaded http-body-util v0.1.3
+2025-06-30T18:15:55.053982503Z #16 2.543   Downloaded http-body v1.0.1
+2025-06-30T18:15:55.053984543Z #16 2.544   Downloaded http v1.3.1
+2025-06-30T18:15:55.053986613Z #16 2.549   Downloaded http v0.2.12
+2025-06-30T18:15:55.053989493Z #16 2.554   Downloaded solana-program-pack v2.2.1
+2025-06-30T18:15:55.053991553Z #16 2.555   Downloaded solana-program-option v2.2.1
+2025-06-30T18:15:55.053993613Z #16 2.556   Downloaded solana-program-memory v2.3.1
+2025-06-30T18:15:55.053995633Z #16 2.557   Downloaded solana-program-error v2.2.2
+2025-06-30T18:15:55.053997634Z #16 2.558   Downloaded solana-program-entrypoint v2.3.0
+2025-06-30T18:15:55.053999634Z #16 2.559   Downloaded solana-nonce-account v2.2.1
+2025-06-30T18:15:55.054001624Z #16 2.560   Downloaded solana-nonce v2.2.1
+2025-06-30T18:15:55.054003674Z #16 2.561   Downloaded solana-net-utils v2.3.2
+2025-06-30T18:15:55.054005734Z #16 2.563   Downloaded solana-native-token v2.3.0
+2025-06-30T18:15:55.054007754Z #16 2.564   Downloaded ring v0.17.14
+2025-06-30T18:15:55.054011114Z #16 2.625   Downloaded nu-ansi-term v0.46.0
+2025-06-30T18:15:55.154192462Z #16 2.628   Downloaded nonzero_ext v0.3.0
+2025-06-30T18:15:55.154224123Z #16 2.634   Downloaded nom v7.1.3
+2025-06-30T18:15:55.154228214Z #16 2.642   Downloaded no-std-compat v0.4.1
+2025-06-30T18:15:55.154231624Z #16 2.643   Downloaded mio v1.0.4
+2025-06-30T18:15:55.154235094Z #16 2.652   Downloaded miniz_oxide v0.8.9
+2025-06-30T18:15:55.154238354Z #16 2.655   Downloaded minimal-lexical v0.2.1
+2025-06-30T18:15:55.154241934Z #16 2.662   Downloaded mime v0.3.17
+2025-06-30T18:15:55.154246115Z #16 2.664   Downloaded merlin v3.0.0
+2025-06-30T18:15:55.154248435Z #16 2.665   Downloaded jsonrpc-core v18.0.0
+2025-06-30T18:15:55.154250465Z #16 2.668   Downloaded jobserver v0.1.33
+2025-06-30T18:15:55.154252525Z #16 2.671   Downloaded itoa v1.0.15
+2025-06-30T18:15:55.154254535Z #16 2.673   Downloaded itertools v0.12.1
+2025-06-30T18:15:55.154256695Z #16 2.683   Downloaded itertools v0.10.5
+2025-06-30T18:15:55.154258715Z #16 2.692   Downloaded iri-string v0.7.8
+2025-06-30T18:15:55.154260735Z #16 2.702   Downloaded ipnet v2.11.0
+2025-06-30T18:15:55.154262805Z #16 2.704   Downloaded inout v0.1.4
+2025-06-30T18:15:55.154264835Z #16 2.706   Downloaded indicatif v0.17.12
+2025-06-30T18:15:55.154266856Z #16 2.711   Downloaded indexmap v2.10.0
+2025-06-30T18:15:55.154268896Z #16 2.720   Downloaded idna_adapter v1.2.1
+2025-06-30T18:15:55.154270986Z #16 2.725   Downloaded idna v1.0.3
+2025-06-30T18:15:55.26186629Z #16 2.730   Downloaded ident_case v1.0.1
+2025-06-30T18:15:55.261883691Z #16 2.731   Downloaded icu_provider v2.0.0
+2025-06-30T18:15:55.261888321Z #16 2.735   Downloaded icu_properties_data v2.0.1
+2025-06-30T18:15:55.261891541Z #16 2.749   Downloaded hmac-drbg v0.3.0
+2025-06-30T18:15:55.261894452Z #16 2.751   Downloaded spl-token-2022 v8.0.1
+2025-06-30T18:15:55.261897552Z #16 2.763   Downloaded sha3 v0.10.8
+2025-06-30T18:15:55.261914113Z #16 2.769   Downloaded spl-type-length-value v0.8.0
+2025-06-30T18:15:55.261917903Z #16 2.771   Downloaded solana-seed-phrase v2.2.1
+2025-06-30T18:15:55.261919993Z #16 2.771   Downloaded solana-genesis-config v2.3.0
+2025-06-30T18:15:55.261922093Z #16 2.773   Downloaded solana-fee-structure v2.3.0
+2025-06-30T18:15:55.261924173Z #16 2.774   Downloaded solana-fee-calculator v2.2.1
+2025-06-30T18:15:55.261926183Z #16 2.775   Downloaded solana-feature-set v2.2.5
+2025-06-30T18:15:55.261928203Z #16 2.776   Downloaded solana-example-mocks v2.2.1
+2025-06-30T18:15:55.261930203Z #16 2.777   Downloaded solana-epoch-schedule v2.2.1
+2025-06-30T18:15:55.261932203Z #16 2.778   Downloaded solana-epoch-rewards-hasher v2.2.1
+2025-06-30T18:15:55.261934274Z #16 2.779   Downloaded solana-epoch-rewards v2.2.1
+2025-06-30T18:15:55.261936303Z #16 2.780   Downloaded solana-epoch-info v2.2.1
+2025-06-30T18:15:55.261938334Z #16 2.781   Downloaded spl-token-group-interface v0.6.0
+2025-06-30T18:15:55.261943324Z #16 2.782   Downloaded spl-token-confidential-transfer-proof-generation v0.4.0
+2025-06-30T18:15:55.261945554Z #16 2.784   Downloaded spl-token-confidential-transfer-proof-extraction v0.3.0
+2025-06-30T18:15:55.261948104Z #16 2.786   Downloaded spl-token-confidential-transfer-ciphertext-arithmetic v0.3.0
+2025-06-30T18:15:55.261950254Z #16 2.787   Downloaded spl-token v8.0.0
+2025-06-30T18:15:55.261952304Z #16 2.790   Downloaded spl-tlv-account-resolution v0.10.0
+2025-06-30T18:15:55.261954364Z #16 2.792   Downloaded solana-tpu-client v2.3.2
+2025-06-30T18:15:55.261956384Z #16 2.794   Downloaded libc v0.2.174
+2025-06-30T18:15:55.261958624Z #16 2.833   Downloaded regex-automata v0.4.9
+2025-06-30T18:15:55.36520864Z #16 2.857   Downloaded futures-io v0.3.31
+2025-06-30T18:15:55.365228661Z #16 2.858   Downloaded futures-executor v0.3.31
+2025-06-30T18:15:55.365232211Z #16 2.860   Downloaded futures-core v0.3.31
+2025-06-30T18:15:55.365235451Z #16 2.862   Downloaded strsim v0.11.1
+2025-06-30T18:15:55.365239642Z #16 2.864   Downloaded stable_deref_trait v1.2.0
+2025-06-30T18:15:55.365243742Z #16 2.865   Downloaded solana-seed-derivable v2.2.1
+2025-06-30T18:15:55.365247402Z #16 2.866   Downloaded solana-security-txt v1.1.1
+2025-06-30T18:15:55.365251412Z #16 2.867   Downloaded solana-secp256r1-program v2.2.4
+2025-06-30T18:15:55.365254222Z #16 2.868   Downloaded solana-secp256k1-recover v2.2.1
+2025-06-30T18:15:55.365256262Z #16 2.869   Downloaded solana-secp256k1-program v2.2.3
+2025-06-30T18:15:55.365258332Z #16 2.870   Downloaded solana-sdk-macro v2.2.1
+2025-06-30T18:15:55.365260343Z #16 2.871   Downloaded solana-sdk-ids v2.2.1
+2025-06-30T18:15:55.365262783Z #16 2.872   Downloaded solana-feature-gate-interface v2.2.2
+2025-06-30T18:15:55.365264833Z #16 2.873   Downloaded spl-pod v0.5.1
+2025-06-30T18:15:55.365267293Z #16 2.875   Downloaded solana-vote-interface v2.2.5
+2025-06-30T18:15:55.365269333Z #16 2.877   Downloaded solana-version v2.3.2
+2025-06-30T18:15:55.365271403Z #16 2.879   Downloaded solana-udp-client v2.3.2
+2025-06-30T18:15:55.365273423Z #16 2.880   Downloaded solana-transaction v2.2.3
+2025-06-30T18:15:55.365275433Z #16 2.882   Downloaded solana-tls-utils v2.3.2
+2025-06-30T18:15:55.365277543Z #16 2.884   Downloaded solana-time-utils v2.2.1
+2025-06-30T18:15:55.365279664Z #16 2.885   Downloaded solana-thin-client v2.3.2
+2025-06-30T18:15:55.365281704Z #16 2.886   Downloaded solana-streamer v2.3.2
+2025-06-30T18:15:55.365283764Z #16 2.890   Downloaded solana-measure v2.3.2
+2025-06-30T18:15:55.365285794Z #16 2.891   Downloaded solana-logger v2.3.1
+2025-06-30T18:15:55.365287814Z #16 2.892   Downloaded rustls v0.23.28
+2025-06-30T18:15:55.365300354Z #16 2.910   Downloaded rustls v0.21.12
+2025-06-30T18:15:55.365302514Z #16 2.926   Downloaded regex-syntax v0.8.5
+2025-06-30T18:15:55.365304655Z #16 2.936   Downloaded quinn-proto v0.11.12
+2025-06-30T18:15:55.4697949Z #16 2.946   Downloaded five8 v0.2.1
+2025-06-30T18:15:55.469814211Z #16 2.947   Downloaded time-core v0.1.4
+2025-06-30T18:15:55.469822031Z #16 2.949   Downloaded solana-metrics v2.3.2
+2025-06-30T18:15:55.469825811Z #16 2.952   Downloaded spl-memo v6.0.0
+2025-06-30T18:15:55.469829131Z #16 2.954   Downloaded spl-generic-token v1.0.1
+2025-06-30T18:15:55.469833452Z #16 2.955   Downloaded spl-elgamal-registry v0.2.0
+2025-06-30T18:15:55.469837102Z #16 2.956   Downloaded spl-discriminator-syn v0.2.0
+2025-06-30T18:15:55.469841082Z #16 2.957   Downloaded spl-discriminator-derive v0.2.0
+2025-06-30T18:15:55.469843232Z #16 2.958   Downloaded spl-discriminator v0.4.1
+2025-06-30T18:15:55.469845312Z #16 2.959   Downloaded spinning_top v0.3.0
+2025-06-30T18:15:55.469847892Z #16 2.961   Downloaded solana-transaction-status-client-types v2.3.2
+2025-06-30T18:15:55.469850002Z #16 2.962   Downloaded solana-transaction-metrics-tracker v2.3.2
+2025-06-30T18:15:55.469852053Z #16 2.964   Downloaded solana-transaction-error v2.2.1
+2025-06-30T18:15:55.469854113Z #16 2.965   Downloaded solana-transaction-context v2.3.2
+2025-06-30T18:15:55.469856263Z #16 2.966   Downloaded solana-sysvar-id v2.2.1
+2025-06-30T18:15:55.469858453Z #16 2.967   Downloaded solana-sysvar v2.2.2
+2025-06-30T18:15:55.469860493Z #16 2.969   Downloaded solana-system-transaction v2.2.1
+2025-06-30T18:15:55.469862523Z #16 2.970   Downloaded solana-system-interface v1.0.0
+2025-06-30T18:15:55.469864543Z #16 2.971   Downloaded solana-svm-feature-set v2.3.2
+2025-06-30T18:15:55.469866573Z #16 2.972   Downloaded solana-stake-interface v1.2.1
+2025-06-30T18:15:55.469868593Z #16 2.974   Downloaded solana-stable-layout v2.2.1
+2025-06-30T18:15:55.469870633Z #16 2.975   Downloaded solana-slot-history v2.2.1
+2025-06-30T18:15:55.469872663Z #16 2.976   Downloaded solana-slot-hashes v2.2.1
+2025-06-30T18:15:55.469874734Z #16 2.977   Downloaded solana-signer v2.2.1
+2025-06-30T18:15:55.469876844Z #16 2.978   Downloaded solana-signature v2.3.0
+2025-06-30T18:15:55.469878884Z #16 2.979   Downloaded solana-shred-version v2.2.1
+2025-06-30T18:15:55.469880974Z #16 2.980   Downloaded solana-short-vec v2.2.1
+2025-06-30T18:15:55.469883304Z #16 2.981   Downloaded solana-sha256-hasher v2.2.1
+2025-06-30T18:15:55.469885344Z #16 2.982   Downloaded solana-serialize-utils v2.2.1
+2025-06-30T18:15:55.469887364Z #16 2.983   Downloaded solana-serde-varint v2.2.2
+2025-06-30T18:15:55.469889384Z #16 2.984   Downloaded solana-serde v2.2.1
+2025-06-30T18:15:55.469891464Z #16 2.985   Downloaded solana-message v2.4.0
+2025-06-30T18:15:55.469893464Z #16 2.987   Downloaded solana-loader-v4-interface v2.2.1
+2025-06-30T18:15:55.469895504Z #16 2.989   Downloaded solana-loader-v3-interface v5.0.0
+2025-06-30T18:15:55.469897535Z #16 2.990   Downloaded solana-loader-v2-interface v2.2.1
+2025-06-30T18:15:55.469899555Z #16 2.991   Downloaded solana-last-restart-slot v2.2.1
+2025-06-30T18:15:55.469901565Z #16 2.992   Downloaded solana-keypair v2.2.3
+2025-06-30T18:15:55.469903585Z #16 2.993   Downloaded solana-keccak-hasher v2.2.1
+2025-06-30T18:15:55.469905625Z #16 2.994   Downloaded solana-instructions-sysvar v2.2.2
+2025-06-30T18:15:55.469907755Z #16 2.995   Downloaded solana-instruction v2.3.0
+2025-06-30T18:15:55.469920316Z #16 2.996   Downloaded solana-inflation v2.2.1
+2025-06-30T18:15:55.469922516Z #16 2.997   Downloaded solana-hash v2.3.0
+2025-06-30T18:15:55.469924546Z #16 2.998   Downloaded solana-hard-forks v2.2.1
+2025-06-30T18:15:55.469937537Z #16 2.999   Downloaded memchr v2.7.5
+2025-06-30T18:15:55.469939787Z #16 3.007   Downloaded zerovec v0.11.2
+2025-06-30T18:15:55.469941827Z #16 3.015   Downloaded zerotrie v0.2.2
+2025-06-30T18:15:55.469943917Z #16 3.020   Downloaded socket2 v0.5.10
+2025-06-30T18:15:55.469945987Z #16 3.023   Downloaded serde_with v3.14.0
+2025-06-30T18:15:55.469948047Z #16 3.041   Downloaded serde_json v1.0.140
+2025-06-30T18:15:55.578813833Z #16 3.051   Downloaded serde v1.0.219
+2025-06-30T18:15:55.578829343Z #16 3.056   Downloaded rustls-webpki v0.101.7
+2025-06-30T18:15:55.578832193Z #16 3.079   Downloaded regex v1.11.1
+2025-06-30T18:15:55.578834383Z #16 3.099   Downloaded rayon v1.10.0
+2025-06-30T18:15:55.578836634Z #16 3.112   Downloaded raw-cpuid v11.5.0
+2025-06-30T18:15:55.578838734Z #16 3.117   Downloaded rand v0.9.1
+2025-06-30T18:15:55.578840834Z #16 3.123   Downloaded rand v0.8.5
+2025-06-30T18:15:55.578843164Z #16 3.128   Downloaded rand v0.7.3
+2025-06-30T18:15:55.578845244Z #16 3.135   Downloaded quinn v0.11.8
+2025-06-30T18:15:55.578847304Z #16 3.140   Downloaded portable-atomic v1.11.1
+2025-06-30T18:15:55.578849404Z #16 3.150   Downloaded memoffset v0.9.1
+2025-06-30T18:15:55.729858466Z #16 3.151   Downloaded memmap2 v0.5.10
+2025-06-30T18:15:55.729877057Z #16 3.154   Downloaded matchit v0.8.4
+2025-06-30T18:15:55.729880727Z #16 3.157   Downloaded lru-slab v0.1.2
+2025-06-30T18:15:55.729883428Z #16 3.158   Downloaded log v0.4.27
+2025-06-30T18:15:55.729886348Z #16 3.161   Downloaded lock_api v0.4.13
+2025-06-30T18:15:55.729889468Z #16 3.162   Downloaded litemap v0.8.0
+2025-06-30T18:15:55.729893458Z #16 3.166   Downloaded libsecp256k1-gen-genmult v0.2.1
+2025-06-30T18:15:55.729896748Z #16 3.166   Downloaded libsecp256k1-gen-ecmult v0.2.1
+2025-06-30T18:15:55.729900408Z #16 3.167   Downloaded libsecp256k1-core v0.2.2
+2025-06-30T18:15:55.729904549Z #16 3.169   Downloaded libsecp256k1 v0.6.0
+2025-06-30T18:15:55.729907589Z #16 3.172   Downloaded lazy_static v1.5.0
+2025-06-30T18:15:55.729909769Z #16 3.174   Downloaded keccak v0.1.5
+2025-06-30T18:15:55.729911829Z #16 3.176   Downloaded zeroize_derive v1.4.2
+2025-06-30T18:15:55.729913809Z #16 3.177   Downloaded zeroize v1.8.1
+2025-06-30T18:15:55.729915829Z #16 3.179   Downloaded zerocopy v0.8.26
+2025-06-30T18:15:55.729917909Z #16 3.216   Downloaded webpki-roots v1.0.1
+2025-06-30T18:15:55.729920149Z #16 3.221   Downloaded webpki-roots v0.25.4
+2025-06-30T18:15:55.729922269Z #16 3.225   Downloaded webpki-roots v0.24.0
+2025-06-30T18:15:55.72992434Z #16 3.229   Downloaded vcpkg v0.2.15
+2025-06-30T18:15:55.830626392Z #16 3.311   Downloaded syn v2.0.104
+2025-06-30T18:15:55.830638953Z #16 3.326   Downloaded syn v1.0.109
+2025-06-30T18:15:55.830643293Z #16 3.340   Downloaded solana-compute-budget-interface v2.2.2
+2025-06-30T18:15:55.830646604Z #16 3.341   Downloaded solana-commitment-config v2.2.1
+2025-06-30T18:15:55.830649884Z #16 3.342   Downloaded solana-cluster-type v2.2.1
+2025-06-30T18:15:55.830653114Z #16 3.342   Downloaded solana-clock v2.2.2
+2025-06-30T18:15:55.830656404Z #16 3.343   Downloaded solana-client-traits v2.2.1
+2025-06-30T18:15:55.830659894Z #16 3.344   Downloaded solana-client v2.3.2
+2025-06-30T18:15:55.830663714Z #16 3.347   Downloaded solana-borsh v2.2.1
+2025-06-30T18:15:55.830666745Z #16 3.348   Downloaded solana-bn254 v2.2.2
+2025-06-30T18:15:55.830668734Z #16 3.349   Downloaded solana-blake3-hasher v2.2.1
+2025-06-30T18:15:55.830670715Z #16 3.350   Downloaded solana-bincode v2.2.1
+2025-06-30T18:15:55.830672925Z #16 3.351   Downloaded solana-big-mod-exp v2.2.1
+2025-06-30T18:15:55.830674935Z #16 3.352   Downloaded solana-atomic-u64 v2.2.1
+2025-06-30T18:15:55.830687415Z #16 3.353   Downloaded solana-address-lookup-table-interface v2.2.2
+2025-06-30T18:15:55.830689726Z #16 3.354   Downloaded solana-account-info v2.3.0
+2025-06-30T18:15:55.830691756Z #16 3.355   Downloaded solana-account-decoder-client-types v2.3.2
+2025-06-30T18:15:55.830693846Z #16 3.356   Downloaded solana-account v2.2.1
+2025-06-30T18:15:55.830696196Z #16 3.357   Downloaded smallvec v1.15.1
+2025-06-30T18:15:55.830698216Z #16 3.360   Downloaded slab v0.4.10
+2025-06-30T18:15:55.830700256Z #16 3.362   Downloaded siphasher v0.3.11
+2025-06-30T18:15:55.830702286Z #16 3.363   Downloaded signature v1.6.4
+2025-06-30T18:15:55.830704356Z #16 3.365   Downloaded signal-hook-registry v1.4.5
+2025-06-30T18:15:55.830715377Z #16 3.367   Downloaded signal-hook v0.3.18
+2025-06-30T18:15:55.830719077Z #16 3.371   Downloaded shlex v1.3.0
+2025-06-30T18:15:55.830722327Z #16 3.373   Downloaded sharded-slab v0.1.7
+2025-06-30T18:15:55.830726237Z #16 3.377   Downloaded sha2 v0.10.9
+2025-06-30T18:15:55.830729937Z #16 3.381   Downloaded sha2 v0.9.9
+2025-06-30T18:15:55.830733268Z #16 3.384   Downloaded sha1 v0.10.6
+2025-06-30T18:15:55.830736388Z #16 3.387   Downloaded serde_with_macros v3.14.0
+2025-06-30T18:15:55.830739608Z #16 3.389   Downloaded serde_urlencoded v0.7.1
+2025-06-30T18:15:55.830742668Z #16 3.391   Downloaded serde_path_to_error v0.1.17
+2025-06-30T18:15:55.830746188Z #16 3.394   Downloaded serde_derive v1.0.219
+2025-06-30T18:15:55.830749669Z #16 3.397   Downloaded serde_bytes v0.11.17
+2025-06-30T18:15:55.830753058Z #16 3.399   Downloaded serde-big-array v0.5.1
+2025-06-30T18:15:55.830759689Z #16 3.401   Downloaded semver v1.0.26
+2025-06-30T18:15:55.930704636Z #16 3.405   Downloaded sct v0.7.1
+2025-06-30T18:15:55.930721936Z #16 3.410   Downloaded scopeguard v1.2.0
+2025-06-30T18:15:55.930724726Z #16 3.412   Downloaded safe_arch v0.7.4
+2025-06-30T18:15:55.930726877Z #16 3.418   Downloaded ryu v1.0.20
+2025-06-30T18:15:55.930728966Z #16 3.423   Downloaded rustversion v1.0.21
+2025-06-30T18:15:55.930731077Z #16 3.427   Downloaded rustls-webpki v0.103.3
+2025-06-30T18:15:55.930733297Z #16 3.431   Downloaded rustls-pki-types v1.12.0
+2025-06-30T18:15:55.930735937Z #16 3.438   Downloaded rustls-native-certs v0.8.1
+2025-06-30T18:15:55.930737967Z #16 3.441   Downloaded rustc-hash v2.1.1
+2025-06-30T18:15:55.930740087Z #16 3.443   Downloaded reqwest-middleware v0.4.2
+2025-06-30T18:15:55.930742107Z #16 3.445   Downloaded rayon-core v1.12.1
+2025-06-30T18:15:55.930744127Z #16 3.450   Downloaded rand_core v0.5.1
+2025-06-30T18:15:55.930746127Z #16 3.452   Downloaded rand_chacha v0.9.0
+2025-06-30T18:15:55.930748118Z #16 3.454   Downloaded rand_chacha v0.3.1
+2025-06-30T18:15:55.930750388Z #16 3.455   Downloaded rand_chacha v0.2.2
+2025-06-30T18:15:55.930752478Z #16 3.457   Downloaded quote v1.0.40
+2025-06-30T18:15:55.930754578Z #16 3.460   Downloaded quinn-udp v0.5.13
+2025-06-30T18:15:55.930756588Z #16 3.463   Downloaded quanta v0.12.6
+2025-06-30T18:15:55.930758608Z #16 3.466   Downloaded proc-macro2 v1.0.95
+2025-06-30T18:15:55.930760628Z #16 3.470   Downloaded proc-macro-crate v3.3.0
+2025-06-30T18:15:55.930762658Z #16 3.472   Downloaded proc-macro-crate v0.1.5
+2025-06-30T18:15:55.930764668Z #16 3.473   Downloaded ppv-lite86 v0.2.21
+2025-06-30T18:15:55.930766718Z #16 3.475   Downloaded powerfmt v0.2.0
+2025-06-30T18:15:55.930768728Z #16 3.476   Downloaded pkg-config v0.3.32
+2025-06-30T18:15:55.930770748Z #16 3.478   Downloaded pin-utils v0.1.0
+2025-06-30T18:15:55.930773209Z #16 3.480   Downloaded pin-project-lite v0.2.16
+2025-06-30T18:15:55.930775249Z #16 3.488   Downloaded percentage v0.1.0
+2025-06-30T18:15:55.93078846Z #16 3.489   Downloaded percent-encoding v2.3.1
+2025-06-30T18:15:55.930790709Z #16 3.490   Downloaded siphasher v1.0.1
+2025-06-30T18:15:55.9307928Z #16 3.492   Downloaded rustc_version v0.4.1
+2025-06-30T18:15:55.93079489Z #16 3.493   Downloaded rand_core v0.9.3
+2025-06-30T18:15:55.93079701Z #16 3.495   Downloaded polyval v0.6.2
+2025-06-30T18:15:55.93079904Z #16 3.498   Downloaded potential_utf v0.1.2
+2025-06-30T18:15:55.93080108Z #16 3.499   Downloaded zerofrom v0.1.6
+2025-06-30T18:15:55.93080311Z #16 3.500   Downloaded yoke-derive v0.8.0
+2025-06-30T18:15:55.9308055Z #16 3.501   Downloaded yoke v0.8.0
+2025-06-30T18:15:56.035318666Z #16 3.504   Downloaded x509-parser v0.14.0
+2025-06-30T18:15:56.035335077Z #16 3.511   Downloaded writeable v0.6.1
+2025-06-30T18:15:56.035337817Z #16 3.513   Downloaded wide v0.7.33
+2025-06-30T18:15:56.035340477Z #16 3.520   Downloaded want v0.3.1
+2025-06-30T18:15:56.035345948Z #16 3.521   Downloaded version_check v0.9.5
+2025-06-30T18:15:56.035348148Z #16 3.523   Downloaded uuid v1.17.0
+2025-06-30T18:15:56.035350208Z #16 3.527   Downloaded thiserror-impl v1.0.69
+2025-06-30T18:15:56.035352268Z #16 3.529   Downloaded sync_wrapper v1.0.2
+2025-06-30T18:15:56.035354978Z #16 3.530   Downloaded rustls-platform-verifier v0.5.3
+2025-06-30T18:15:56.035357168Z #16 3.536   Downloaded thread_local v1.1.9
+2025-06-30T18:15:56.035359268Z #16 3.538   Downloaded thiserror-impl v2.0.12
+2025-06-30T18:15:56.035361288Z #16 3.540   Downloaded thiserror v2.0.12
+2025-06-30T18:15:56.035363289Z #16 3.549   Downloaded thiserror v1.0.69
+2025-06-30T18:15:56.035365289Z #16 3.558   Downloaded termcolor v1.4.1
+2025-06-30T18:15:56.035367319Z #16 3.559   Downloaded synstructure v0.13.2
+2025-06-30T18:15:56.035369339Z #16 3.561   Downloaded synstructure v0.12.6
+2025-06-30T18:15:56.035371349Z #16 3.563   Downloaded subtle v2.6.1
+2025-06-30T18:15:56.035373419Z #16 3.565   Downloaded rand_core v0.6.4
+2025-06-30T18:15:56.035375439Z #16 3.567   Downloaded curve25519-dalek v3.2.0
+2025-06-30T18:15:56.035377459Z #16 3.580   Downloaded spl-program-error-derive v0.5.0
+2025-06-30T18:15:56.035379489Z #16 3.581   Downloaded spl-program-error v0.7.0
+2025-06-30T18:15:56.035381559Z #16 3.582   Downloaded spl-associated-token-account v7.0.0
+2025-06-30T18:15:56.035383579Z #16 3.585   Downloaded qstring v0.7.2
+2025-06-30T18:15:56.035385619Z #16 3.586   Downloaded event-listener-strategy v0.5.4
+2025-06-30T18:15:56.03538778Z #16 3.587   Downloaded event-listener v5.4.0
+2025-06-30T18:15:56.03538996Z #16 3.590   Downloaded event-listener v2.5.3
+2025-06-30T18:15:56.03539205Z #16 3.592   Downloaded env_logger v0.9.3
+2025-06-30T18:15:56.03539407Z #16 3.595   Downloaded ed25519-dalek v1.0.1
+2025-06-30T18:15:56.03539617Z #16 3.598   Downloaded ed25519 v1.5.3
+2025-06-30T18:15:56.035411391Z #16 3.600   Downloaded dlopen2_derive v0.3.0
+2025-06-30T18:15:56.035413681Z #16 3.601   Downloaded dlopen2 v0.5.0
+2025-06-30T18:15:56.035415711Z #16 3.606   Downloaded displaydoc v0.2.5
+2025-06-30T18:15:56.138834905Z #16 3.610   Downloaded derivative v2.2.0
+2025-06-30T18:15:56.138849455Z #16 3.622   Downloaded der-parser v8.2.0
+2025-06-30T18:15:56.138852185Z #16 3.627   Downloaded data-encoding v2.9.0
+2025-06-30T18:15:56.138854475Z #16 3.628   Downloaded dashmap v5.5.3
+2025-06-30T18:15:56.138859046Z #16 3.631   Downloaded darling_core v0.20.11
+2025-06-30T18:15:56.138861236Z #16 3.639   Downloaded darling v0.20.11
+2025-06-30T18:15:56.138863876Z #16 3.646   Downloaded curve25519-dalek-derive v0.1.1
+2025-06-30T18:15:56.138866106Z #16 3.647   Downloaded curve25519-dalek v4.1.3
+2025-06-30T18:15:56.138878037Z #16 3.659   Downloaded ctr v0.9.2
+2025-06-30T18:15:56.138880267Z #16 3.662   Downloaded crypto-mac v0.8.0
+2025-06-30T18:15:56.138882337Z #16 3.663   Downloaded crypto-common v0.1.6
+2025-06-30T18:15:56.138884537Z #16 3.664   Downloaded crunchy v0.2.4
+2025-06-30T18:15:56.138886597Z #16 3.665   Downloaded crossbeam-utils v0.8.21
+2025-06-30T18:15:56.138888677Z #16 3.669   Downloaded crossbeam-epoch v0.9.18
+2025-06-30T18:15:56.138890967Z #16 3.672   Downloaded crossbeam-channel v0.5.15
+2025-06-30T18:15:56.138893107Z #16 3.678   Downloaded crc32fast v1.4.2
+2025-06-30T18:15:56.138895188Z #16 3.681   Downloaded cpufeatures v0.2.17
+2025-06-30T18:15:56.138897248Z #16 3.683   Downloaded constant_time_eq v0.3.1
+2025-06-30T18:15:56.138899308Z #16 3.684   Downloaded console v0.16.0
+2025-06-30T18:15:56.138901328Z #16 3.689   Downloaded concurrent-queue v2.5.0
+2025-06-30T18:15:56.138903348Z #16 3.691   Downloaded cipher v0.4.4
+2025-06-30T18:15:56.138905358Z #16 3.693   Downloaded chrono v0.4.41
+2025-06-30T18:15:56.138907368Z #16 3.702   Downloaded cfg_eval v0.1.2
+2025-06-30T18:15:56.138909448Z #16 3.705   Downloaded cc v1.2.27
+2025-06-30T18:15:56.138911538Z #16 3.710   Downloaded byteorder v1.5.0
+2025-06-30T18:15:56.23980271Z #16 3.712   Downloaded bs58 v0.5.1
+2025-06-30T18:15:56.239818311Z #16 3.715   Downloaded brotli-decompressor v5.0.0
+2025-06-30T18:15:56.239821191Z #16 3.723   Downloaded brotli v8.0.1
+2025-06-30T18:15:56.239823371Z #16 3.759   Downloaded blake3 v1.8.2
+2025-06-30T18:15:56.239825581Z #16 3.770   Downloaded axum-core v0.5.2
+2025-06-30T18:15:56.239828151Z #16 3.773   Downloaded axum v0.8.4
+2025-06-30T18:15:56.239830262Z #16 3.785   Downloaded async-channel v1.9.0
+2025-06-30T18:15:56.239832292Z #16 3.787   Downloaded asn1-rs v0.5.2
+2025-06-30T18:15:56.239834342Z #16 3.796   Downloaded solana-validator-exit v2.2.1
+2025-06-30T18:15:56.239836452Z #16 3.796   Downloaded equivalent v1.0.2
+2025-06-30T18:15:56.239838532Z #16 3.798   Downloaded either v1.15.0
+2025-06-30T18:15:56.239840612Z #16 3.800   Downloaded ed25519-dalek-bip32 v0.2.0
+2025-06-30T18:15:56.239843012Z #16 3.801   Downloaded deranged v0.4.0
+2025-06-30T18:15:56.239845862Z #16 3.803   Downloaded crossbeam-deque v0.8.6
+2025-06-30T18:15:56.239848772Z #16 3.804   Downloaded cfg_aliases v0.2.1
+2025-06-30T18:15:56.239850883Z #16 3.806   Downloaded cfg-if v1.0.1
+2025-06-30T18:15:56.239852943Z #16 3.807   Downloaded caps v0.5.5
+2025-06-30T18:15:56.239855073Z #16 3.811   Downloaded base64 v0.13.1
+2025-06-30T18:15:56.341251789Z #16 3.815   Downloaded async-lock v3.4.0
+2025-06-30T18:15:56.34126817Z #16 3.818   Downloaded arrayvec v0.7.6
+2025-06-30T18:15:56.34127217Z #16 3.820   Downloaded ark-poly v0.4.2
+2025-06-30T18:15:56.34127612Z #16 3.824   Downloaded parking_lot_core v0.9.11
+2025-06-30T18:15:56.34127991Z #16 3.827   Downloaded parking_lot v0.12.4
+2025-06-30T18:15:56.341282361Z #16 3.831   Downloaded overload v0.1.1
+2025-06-30T18:15:56.34128441Z #16 3.833   Downloaded opaque-debug v0.3.1
+2025-06-30T18:15:56.341286521Z #16 3.834   Downloaded fastbloom v0.9.0
+2025-06-30T18:15:56.341288611Z #16 3.836   Downloaded digest v0.10.7
+2025-06-30T18:15:56.341290701Z #16 3.838   Downloaded digest v0.9.0
+2025-06-30T18:15:56.341292791Z #16 3.840   Downloaded derivation-path v0.2.0
+2025-06-30T18:15:56.341294821Z #16 3.841   Downloaded darling_macro v0.20.11
+2025-06-30T18:15:56.341296851Z #16 3.842   Downloaded borsh-derive v1.5.7
+2025-06-30T18:15:56.341298871Z #16 3.846   Downloaded bincode v1.3.3
+2025-06-30T18:15:56.341300911Z #16 3.849   Downloaded base64 v0.12.3
+2025-06-30T18:15:56.341303211Z #16 3.853   Downloaded autocfg v1.5.0
+2025-06-30T18:15:56.341315162Z #16 3.856   Downloaded ark-std v0.4.0
+2025-06-30T18:15:56.341317332Z #16 3.858   Downloaded parking v2.2.1
+2025-06-30T18:15:56.341319362Z #16 3.859   Downloaded bytes v1.10.1
+2025-06-30T18:15:56.341321392Z #16 3.865   Downloaded bytemuck_derive v1.9.3
+2025-06-30T18:15:56.341323432Z #16 3.867   Downloaded bytemuck v1.23.1
+2025-06-30T18:15:56.341325452Z #16 3.872   Downloaded bv v0.11.1
+2025-06-30T18:15:56.341327472Z #16 3.876   Downloaded async-compression v0.4.25
+2025-06-30T18:15:56.341329493Z #16 3.891   Downloaded asn1-rs-impl v0.1.0
+2025-06-30T18:15:56.341331503Z #16 3.892   Downloaded asn1-rs-derive v0.4.0
+2025-06-30T18:15:56.341333513Z #16 3.893   Downloaded arrayref v0.3.9
+2025-06-30T18:15:56.341335943Z #16 3.895   Downloaded ark-serialize-derive v0.4.2
+2025-06-30T18:15:56.341337983Z #16 3.896   Downloaded ark-serialize v0.4.2
+2025-06-30T18:15:56.341340003Z #16 3.897   Downloaded ark-ff-macros v0.4.2
+2025-06-30T18:15:56.341342063Z #16 3.899   Downloaded ark-ff-asm v0.4.2
+2025-06-30T18:15:56.341349174Z #16 3.901   Downloaded ark-ff v0.4.2
+2025-06-30T18:15:56.341351384Z #16 3.906   Downloaded ark-ec v0.4.2
+2025-06-30T18:15:56.341353484Z #16 3.912   Downloaded ark-bn254 v0.4.0
+2025-06-30T18:15:56.492210459Z #16 3.914   Downloaded anyhow v1.0.98
+2025-06-30T18:15:56.49223084Z #16 3.920   Downloaded alloc-stdlib v0.2.2
+2025-06-30T18:15:56.49223567Z #16 3.921   Downloaded borsh-derive-internal v0.10.4
+2025-06-30T18:15:56.49223921Z #16 3.923   Downloaded borsh-derive v0.10.4
+2025-06-30T18:15:56.49224265Z #16 3.924   Downloaded borsh v1.5.7
+2025-06-30T18:15:56.49224659Z #16 3.934   Downloaded borsh v0.10.4
+2025-06-30T18:15:56.492249321Z #16 3.938   Downloaded block-buffer v0.10.4
+2025-06-30T18:15:56.492251631Z #16 3.939   Downloaded block-buffer v0.9.0
+2025-06-30T18:15:56.492253731Z #16 3.940   Downloaded bitflags v2.9.1
+2025-06-30T18:15:56.492256891Z #16 3.946   Downloaded base64 v0.22.1
+2025-06-30T18:15:56.492260691Z #16 3.951   Downloaded atty v0.2.14
+2025-06-30T18:15:56.492264131Z #16 3.953   Downloaded async-trait v0.1.88
+2025-06-30T18:15:56.492270122Z #16 3.958   Downloaded aes v0.8.4
+2025-06-30T18:15:56.492273712Z #16 3.963   Downloaded agave-feature-set v2.3.2
+2025-06-30T18:15:56.64319688Z #16 4.081 error: rustc 1.80.1 is not supported by the following packages:
+2025-06-30T18:15:56.643235171Z #16 4.081   icu_collections@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643242572Z #16 4.081   icu_locale_core@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643248232Z #16 4.081   icu_normalizer@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643253212Z #16 4.081   icu_normalizer_data@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643258263Z #16 4.081   icu_normalizer_data@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643263313Z #16 4.081   icu_normalizer_data@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643268593Z #16 4.081   icu_properties@2.0.1 requires rustc 1.82
+2025-06-30T18:15:56.643274053Z #16 4.081   icu_properties_data@2.0.1 requires rustc 1.82
+2025-06-30T18:15:56.643280034Z #16 4.081   icu_properties_data@2.0.1 requires rustc 1.82
+2025-06-30T18:15:56.643283454Z #16 4.081   icu_properties_data@2.0.1 requires rustc 1.82
+2025-06-30T18:15:56.643286904Z #16 4.081   icu_provider@2.0.0 requires rustc 1.82
+2025-06-30T18:15:56.643290234Z #16 4.081   idna_adapter@1.2.1 requires rustc 1.82
+2025-06-30T18:15:56.643295385Z #16 4.081   litemap@0.8.0 requires rustc 1.82
+2025-06-30T18:15:56.643298855Z #16 4.081   potential_utf@0.1.2 requires rustc 1.81
+2025-06-30T18:15:56.643302145Z #16 4.081   solana-net-utils@2.3.2 requires rustc 1.83.0
+2025-06-30T18:15:56.643305625Z #16 4.081   tinystr@0.8.1 requires rustc 1.81
+2025-06-30T18:15:56.643327656Z #16 4.081   writeable@0.6.1 requires rustc 1.81
+2025-06-30T18:15:56.643329826Z #16 4.081   yoke@0.8.0 requires rustc 1.81
+2025-06-30T18:15:56.643331866Z #16 4.081   zerofrom@0.1.6 requires rustc 1.81
+2025-06-30T18:15:56.643333936Z #16 4.081   zerotrie@0.2.2 requires rustc 1.82
+2025-06-30T18:15:56.643336367Z #16 4.081   zerovec@0.11.2 requires rustc 1.82
+2025-06-30T18:15:56.643338576Z #16 4.081 Either upgrade rustc or select compatible dependency versions with
+2025-06-30T18:15:56.643340677Z #16 4.081 `cargo update <name>@<current-ver> --precise <compatible-ver>`
+2025-06-30T18:15:56.643342917Z #16 4.081 where `<compatible-ver>` is the latest version supporting rustc 1.80.1
+2025-06-30T18:15:56.643345047Z #16 4.081 
+2025-06-30T18:15:57.666350884Z #16 ERROR: process "/bin/sh -c cargo build --release" did not complete successfully: exit code: 101
+2025-06-30T18:15:57.691809349Z ------
+2025-06-30T18:15:57.691821179Z  > [builder 6/6] RUN cargo build --release:
+2025-06-30T18:15:57.691824419Z 4.081   tinystr@0.8.1 requires rustc 1.81
+2025-06-30T18:15:57.691827319Z 4.081   writeable@0.6.1 requires rustc 1.81
+2025-06-30T18:15:57.69183107Z 4.081   yoke@0.8.0 requires rustc 1.81
+2025-06-30T18:15:57.69183569Z 4.081   zerofrom@0.1.6 requires rustc 1.81
+2025-06-30T18:15:57.69184011Z 4.081   zerotrie@0.2.2 requires rustc 1.82
+2025-06-30T18:15:57.69184459Z 4.081   zerovec@0.11.2 requires rustc 1.82
+2025-06-30T18:15:57.69184925Z 4.081 Either upgrade rustc or select compatible dependency versions with
+2025-06-30T18:15:57.6918538Z 4.081 `cargo update <name>@<current-ver> --precise <compatible-ver>`
+2025-06-30T18:15:57.691858521Z 4.081 where `<compatible-ver>` is the latest version supporting rustc 1.80.1
+2025-06-30T18:15:57.691863691Z 4.081 
+2025-06-30T18:15:57.691874801Z ------
+2025-06-30T18:15:57.692721582Z Dockerfile:20
+2025-06-30T18:15:57.692734403Z --------------------
+2025-06-30T18:15:57.692739093Z   18 |     
+2025-06-30T18:15:57.692743573Z   19 |     # Build the application
+2025-06-30T18:15:57.692747843Z   20 | >>> RUN cargo build --release
+2025-06-30T18:15:57.692752074Z   21 |     
+2025-06-30T18:15:57.692756764Z   22 |     # Runtime stage
+2025-06-30T18:15:57.692761144Z --------------------
+2025-06-30T18:15:57.692766084Z error: failed to solve: process "/bin/sh -c cargo build --release" did not complete successfully: exit code: 101
+2025-06-30T18:15:57.708240879Z error: exit status 1

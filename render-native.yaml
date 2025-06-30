@@ -1,4 +1,4 @@
-# Render deployment configuration (Native environment - Most Reliable)
+# Render deployment configuration (Native environment with Rust 1.83)
 services:
   - type: web
     name: solana-fellowship-server

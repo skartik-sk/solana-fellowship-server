@@ -1,5 +1,5 @@
-# Use the official Rust image as base (updated version)
-FROM rust:1.80-slim as builder
+# Use the official Rust image as base (updated to 1.83 for Solana compatibility)
+FROM rust:1.83-slim AS builder
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -10,11 +10,17 @@ RUN apt-get update && apt-get install -y \
 # Create app directory
 WORKDIR /app
 
-# Copy Cargo files
-COPY Cargo.toml ./
+# Copy Cargo files for dependency caching
+COPY Cargo.toml Cargo.lock ./
+
+# Create a dummy main.rs to build dependencies first (for better Docker layer caching)
+RUN mkdir src && echo "fn main() {}" > src/main.rs && cargo build --release && rm -rf src
 
 # Copy source code
 COPY src ./src
+
+# Touch main.rs to ensure it's newer than the dummy version
+RUN touch src/main.rs
 
 # Build the application
 RUN cargo build --release
