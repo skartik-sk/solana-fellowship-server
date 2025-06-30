@@ -1,0 +1,60 @@
+# Railway deployment configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: solana-server-config
+data:
+  PORT: "3000"
+  RUST_LOG: "info"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solana-http-server
+  labels:
+    app: solana-http-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: solana-http-server
+  template:
+    metadata:
+      labels:
+        app: solana-http-server
+    spec:
+      containers:
+      - name: solana-server
+        image: solana-http-server:latest
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: solana-server-config
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: solana-http-service
+spec:
+  selector:
+    app: solana-http-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer

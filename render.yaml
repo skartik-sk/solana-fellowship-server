@@ -1,0 +1,16 @@
+# Render deployment configuration (Free tier)
+services:
+  - type: web
+    name: solana-fellowship-server
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: oregon
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: RUST_LOG
+        value: info
+    autoDeploy: true

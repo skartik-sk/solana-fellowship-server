@@ -1,0 +1,18 @@
+# Railway deployment configuration
+services:
+  - name: solana-fellowship-server
+    source:
+      type: github
+      repo: your-repo/sol-fn
+    build:
+      buildCommand: cargo build --release
+      startCommand: ./target/release/sol-fn
+    env:
+      PORT: 3000
+      RUST_LOG: info
+    healthcheck:
+      path: /health
+      port: 3000
+    resources:
+      memory: 512
+      cpu: 0.5

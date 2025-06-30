@@ -1,0 +1,13 @@
+{
+  "name": "solana-fellowship-server",
+  "version": "1.0.0",
+  "description": "Solana Fellowship Assignment HTTP Server",
+  "main": "src/main.rs",
+  "scripts": {
+    "build": "cargo build --release",
+    "start": "cargo run --release"
+  },
+  "keywords": ["solana", "rust", "axum", "fellowship"],
+  "author": "Fellowship Assignment",
+  "license": "MIT"
+}
