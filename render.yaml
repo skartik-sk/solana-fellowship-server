@@ -1,10 +1,9 @@
-# Render deployment configuration (Free tier)
+# Render deployment configuration (Docker environment)
 services:
   - type: web
     name: solana-fellowship-server
     env: docker
     dockerfilePath: ./Dockerfile
-    dockerContext: .
     region: oregon
     plan: free
     healthCheckPath: /health

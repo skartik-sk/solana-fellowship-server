@@ -340,7 +340,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/send/token", post(send_token))
         .layer(CorsLayer::permissive());
 
-    let port = std::env::var("PORT").unwrap_or_else(|_| "3000".to_string());
+    let port = std::env::var("PORT").unwrap_or_else(|_| "10000".to_string());
     let addr = format!("0.0.0.0:{}", port);
     
     info!("🚀 Starting Solana Fellowship Assignment HTTP Server on {}", addr);

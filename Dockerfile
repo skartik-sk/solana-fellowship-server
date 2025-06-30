@@ -1,5 +1,5 @@
-# Use the official Rust image as base
-FROM rust:1.75-slim as builder
+# Use the official Rust image as base (updated version)
+FROM rust:1.80-slim as builder
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy Cargo files
-COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml ./
 
 # Copy source code
 COPY src ./src
@@ -37,11 +37,11 @@ COPY --from=builder /app/target/release/sol-fn /usr/local/bin/sol-fn
 # Change to non-root user
 USER appuser
 
-# Expose port
-EXPOSE 3000
+# Expose port (will be overridden by cloud platforms)
+EXPOSE 10000
 
 # Set environment variables
-ENV PORT=3000
+ENV PORT=10000
 ENV RUST_LOG=info
 
 # Run the application
